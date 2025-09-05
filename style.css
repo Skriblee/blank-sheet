@@ -1,0 +1,339 @@
+/*Animation*/
+@keyframes zoom-in{
+    from{
+        opacity: 0%;
+        transform: scale(1.3, 1.3);
+    }
+    to{
+        opacity: 100%;
+        transform: scale(auto);
+    }
+}
+
+@keyframes appear{
+    from{
+        opacity: 0%;
+        transform: translate(0px, 20px);
+    }
+    to{
+        opacity: 100%;
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes upward{
+    from{
+        transform: translateY(100vh) scale(1);
+    }
+    to{
+        transform: translateY(0vh) scale(0);
+    }
+}
+
+hr, .icon{
+    animation: zoom-in 1s forwards;
+}
+
+.a1, h1, h5{
+    animation: appear 1s forwards;
+}
+
+.a1-5, h4, h5{
+    animation: appear 1.5s forwards;
+}
+
+.a2, h6, p{
+    animation: appear 2s forwards;
+}
+
+.cus{
+    opacity:0%;
+    animation: appear 1s forwards;
+    animation-delay: calc(1s*var(--i));
+}
+
+/*Bg*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background: linear-gradient(to bottom, #e9f5dc, #c8e8de);
+    align-items: center;
+}
+
+.container-bg{
+    position:relative;
+    overflow:hidden;
+    width:100%;
+    height:100vh;
+}
+
+.dots{
+    position:relative;
+    display: flex;
+}
+
+.dots span{
+    position:relative;
+    min-width:11px;
+    min-height:11px;
+    background:white;
+    margin:0 3%;
+    border-radius:50%;
+    animation: upward 15s linear infinite;
+    animation-duration: calc(105s/var(--i));
+}
+
+
+/*index*/
+.icon{
+  border-radius: 50%;
+  max-width:170px;
+  max-height:170px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  border-color:#6cd64b;
+  border-style:dashed;
+  margin-bottom:15px;
+}
+
+.main{
+    background-color:rgba(255,255,255,0.5);
+    background-blend-mode:lighten;
+    padding:30px;
+    border-radius:5%;
+}
+
+/*Commissions*/
+.c{
+    color:white;
+    text-shadow: #0d3628 4px 3px 2px;
+}
+
+.portfolio{
+    background: linear-gradient(to bottom, #d1e3dc, #95c787, #5ebf74);
+    border-style: dashed;
+    border-width:4px;
+    border-color:#0e8056;
+    border-radius:17px;
+    overflow:hidden;
+}
+
+/*TOS*/
+#tos1, #tos2{
+    background-color:rgba(255,255,255,0.5);
+    background-blend-mode:lighten;
+    padding:10px;
+    border-radius:5%;
+}
+
+.tos ul{
+    font-size:15px;
+}
+
+/*Prices*/
+.prices{
+    background-color:rgba(255,255,255,0.5);
+    background-blend-mode:lighten;
+    padding:20px;
+    border-radius:5%;
+}
+
+.price-ref{
+    width:100%;
+}
+
+/*Navbar*/
+@media screen and (min-width:992px){
+    .navbar .container-fluid, .navbar-expand-lg .navbar-nav, .navbar-expand-lg .navbar-collapse{
+        flex-direction:column;
+    }
+    
+    .navbar{
+        height:100vh;
+    }
+    
+    header{
+        border-right-style:solid;
+        width:25%;
+        position:fixed;
+    }
+    
+    main{
+        padding-left:10%;
+        padding-right:10%;
+    }
+    
+    footer, main{
+        margin-left:25%;
+    }
+    
+    .main-side{
+        margin-top:10vh;
+        margin-bottom:10vh;
+    }
+    
+    .carousel-img{
+        max-width:800px;
+    }
+    
+    .container-bg{
+        min-height:100vh;
+    }
+}
+
+@media screen and (max-width:992px){
+    header{
+        border-bottom-style:solid;
+    }
+    
+    .main-side{
+        margin:10%;
+        margin-top:35px;
+    }
+}
+
+.navbar-brand{
+    font-weight:bold;
+    margin-top:10px;
+}
+
+.nav-item{
+    font-family:'Bitter';
+}
+
+header{
+    border-color:#6cd64b;
+    background:url(https://codehs.com/uploads/ca8ecbb083d4ae2f943424c7546897a6);
+    background-size:cover;
+    background-position:center;
+    
+}
+
+footer{
+    background-color:white;
+    margin-top:20px;
+}
+
+/*General*/
+h1, h2, h3, h4, h5, p{
+    text-align:center;
+    color:#063827;
+}
+
+h3, h4, h5{
+    font-family:'Bitter';
+    
+}
+
+h1{
+    font-weight:bolder;
+    font-family:'Playfair Display SC';
+    background: linear-gradient(to right, #cafc95, #5ac938, #1fa672, #1fa672);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-size:40px;
+}
+
+h2{
+    font-weight:bold;
+    font-family:'Playfair Display SC';
+    background: linear-gradient(to right, #3abd71, #5ac938, #1fa672, #008051);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+h4{
+    color:#58c938;
+}
+
+p{
+    font-family:'Karla';
+    margin-bottom:1px;
+    color:#054d34;
+}
+
+li{
+    font-family:'Karla';
+    list-style-type: '✦';
+    padding-inline-start: 2ch;
+    color:#054d34;
+    margin-top:15px;
+}
+
+hr{
+    color:#6cd64b;
+}
+
+a{
+    
+}
+
+/*Specifics*/
+
+.btn{
+    font-family:'Bitter';
+    font-variant: small-caps;
+    font-weight:bold;
+    color:#0d3628;
+    background: url(https://codehs.com/uploads/ca8ecbb083d4ae2f943424c7546897a6);
+    background-size:cover;
+    border-style: solid;
+    border-width:2px;
+    border-color:#6cd64b;
+}
+
+.emph{
+    color:Green; 
+    font-weight:Bold;
+    font-style:italic;
+}
+
+.space{
+    height:50px;
+}
+
+.col-lg img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    object-position: 25% 25%;
+    align-items:center;
+    border-color:white; 
+    border-style:solid;
+}
+
+.col-lg{
+    margin-bottom:10px;
+}
+
+.sm{
+    font-size:2vh;
+}
+
+.whiten{
+    text-shadow: #0e8056 2px 2px 4px; 
+    color:white;
+    font-weight:bold;
+}
+
+header li{
+    list-style-type: '';
+    font-size:17px;
+    margin-top:0px;
+}
+
+.btn:hover{
+    border-color:#41a123;
+    color:#106145;
+}
+
+/*ids*/
+#terms, #prices, #hb, #fb, #ref{
+    display:none;
+}
